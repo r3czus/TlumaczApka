@@ -100,36 +100,36 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnLoad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            @Override  FileReader fr = null;
+            File myExternalFile = new File(getExternalFilesDir(filepath), filename);
 
-                FileReader fr = null;
-                File myExternalFile = new File(getExternalFilesDir(filepath), filename);
-
-                StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new StringBuilder();
                 try {
 
-                    fr = new FileReader(myExternalFile);
+                fr = new FileReader(myExternalFile);
 
-                    BufferedReader br = new BufferedReader(fr);
+                BufferedReader br = new BufferedReader(fr);
 
-                    String line = br.readLine();
+                String line = br.readLine();
 
-                    while(line != null){
+                while(line != null){
 
-                        stringBuilder.append(line).append('\n');
+                    stringBuilder.append(line).append('\n');
 
-                        line = br.readLine();
-                    }
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } finally {
-
-                    String fileContents =  stringBuilder.toString()+"\n"+"\n";
-                    tvLoad.setText(fileContents);
+                    line = br.readLine();
                 }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+
+                String fileContents =  stringBuilder.toString()+"\n"+"\n";
+                tvLoad.setText(fileContents);
+            }
+            public void onClick(View view) {
+
+
             }
         });
     }
