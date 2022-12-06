@@ -27,8 +27,7 @@
                 android:layout_height="30dp"
                 android:src="@drawable/translate"
                 android:layout_gravity="center"
-                android:layout_marginEnd="4dp"
-                />
+                android:layout_marginEnd="4dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,6 +104,67 @@
 
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/btnTranslation"
+            android:text="Przetłumacz"
+            android:textSize="19sp"
+            android:textAllCaps="false"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTranslated"
+            android:text="Przetłumaczony text"
+            android:background="@drawable/background"
+            android:elevation="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:padding="16sp"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:letterSpacing="0.03"
+            android:visibility="gone"/>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:id="@+id/btnSave"
+            android:text="Zapisz"
+            android:textSize="19sp"
+            android:textAllCaps="false"/>
+          <com.google.android.material.button.MaterialButton
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="20dp"
+              android:id="@+id/btnShow"
+              android:text="Lista"
+              android:textSize="19sp"
+              android:textAllCaps="false"/>
+      </LinearLayout>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/download"
+            android:padding="4dp"
+            android:id="@+id/ivOnimage"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+
 
 
 
